@@ -1,10 +1,13 @@
 import React from 'react';
+import WeatherProvider from '../providers/WeatherProvider';
 import './components/Dashboard';
 
 
 function App() {
   return (
-    <Dashboard />
+    <WeatherProvider>
+      <Dashboard />
+    </WeatherProvider>
   );
 }
 
