@@ -5,6 +5,7 @@ export const WeatherContext = createContext();
 const WeatherProvider = ({ children }) => {
 
     const [searchCity, setSearchCity] = useState();
+    const [searchList, setSearchList] = useState();
     const [currentWeather, setCurrentWeather] = useState();
     const [fiveDayWeather, setFiveDayWeather] = useState();
 
@@ -14,6 +15,8 @@ const WeatherProvider = ({ children }) => {
             value={{
                 searchCity,
                 setSearchCity,
+                searchList,
+                setSearchList,
                 currentWeather,
                 setCurrentWeather,
                 fiveDayWeather,

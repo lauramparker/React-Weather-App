@@ -4,7 +4,7 @@ import { WeatherContext } from '../providers/WeatherProvider';
 
 const Search = () => {  //{children}
     //from WeatherContext
-    const { setSearchCity } = useContext(WeatherContext);
+    const { setSearchCity, setSearchList } = useContext(WeatherContext);
 
     //assignment to read value of current input city name
     const [name, setName] = useState('');
@@ -22,10 +22,12 @@ const Search = () => {  //{children}
         }
     }; //end handleSubmit
 
-    //(then useEffect (anonymous function) with [dependency] required as callback to update state)
+    //then useEffect (anonymous function) with [dependency] required as callback to update 
+    //update both searchCity and searchList
     useEffect(() => {
         if (name) {
             setSearchCity({ cityName: name })
+            setSearchList({ ...setSearchList.push(name)}) //also maybe?  setSearchList({searchList: [setSearchList, name]})
         }
     }, [name]);
 
