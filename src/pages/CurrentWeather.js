@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { WeatherContext } from '../providers/WeatherProvider';
 import {Row, Col, Container} from 'react-bootstrap';
 import API from '../utils/API';
