@@ -1,21 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Weather App",
+  "name": "React Weather Forecast App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgraphic.com%2Ftutorials%2Fcreate-a-set-of-weather-icons&psig=AOvVaw1FG9_d9OHUaAQQSSHzLAQL&ust=1618498227311000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOiYtf_9_e8CFQAAAAAdAAAAABAD",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "type": "image"
     }
   ],
   "start_url": ".",
