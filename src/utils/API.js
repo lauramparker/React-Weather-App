@@ -6,7 +6,6 @@ const API = {
 
     getCurrentWeather: function(searchCity) {
         return axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=1b758f2281f1833aa291dff536f4b566")
-        
     },
 
     getFiveDay: function(searchCity) {
