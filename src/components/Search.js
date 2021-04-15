@@ -4,7 +4,7 @@ import { WeatherContext } from '../providers/WeatherProvider';
 
 const Search = ({children}) => { 
     //from WeatherContext
-    const { searchCity, setSearchCity, setSearchList, searchList } = useContext(WeatherContext);
+    const { searchCity, setSearchCity, setSearchList } = useContext(WeatherContext);
 
     //use component state inherent to search form
     const [name, setName] = useState(null);
@@ -23,7 +23,7 @@ const Search = ({children}) => {
         if (name) {
             console.log('Searching for this city: ' + searchCity)
         } else {console.log('Nooooope!')}
-    }, [name, setSearchCity, searchList]);
+    }, [name, searchCity]);
 
 
     return(

@@ -6,7 +6,15 @@ const WeatherProvider = ({ children }) => {
 
     const [searchCity, setSearchCity] = useState();
     const [searchList, setSearchList] = useState([]);
-    const [currentWeather, setCurrentWeather] = useState();
+    const [currentWeather, setCurrentWeather] = useState({
+        name:'',
+        temp:'',
+        humidity:'',
+        wind:'',
+        iconCode:'',
+        lat:'',
+        long:''
+    });
     const [fiveDayWeather, setFiveDayWeather] = useState();
 
 
