@@ -18,14 +18,15 @@ const CurrentWeather = () => {
                 temp: res.data.main.temp,
                 humidity: res.data.main.humidity,
                 wind: res.data.wind.speed,
-                icon: res.data.weather[0].icon,
+                iconCode: res.data.weather[0].icon,
                 lat: res.data.coord.lat,
                 long: res.data.coord.lon
               });
             })
             .catch(err => console.error(err));
-            // return () => { isMounted = false }; // use effect cleanup to set flag false, if unmounted
           }, [searchCity, setCurrentWeather]);
+
+
 
     return(
         <Container>
@@ -37,9 +38,13 @@ const CurrentWeather = () => {
             <Row>
                 <Col>
                 <p>NAME of CITY</p>
-                 {/* <h4>name: {currentWeather.name} {currentWeather.icon}</h4>
-                 <p>temperature: {currentWeather.temp}</p>
-                 <p>humidity: {currentWeather.humidity}</p> */}
+                 <h4>name: {currentWeather.name}</h4>
+                 <img 
+                   src={'https://openweathermap.org/img/wn/'+currentWeather.iconCode+'@2x.png'}
+                   alt="weather icon"
+                   />
+                 <p>temperature: {currentWeather.temp} °F</p>
+                 <p>humidity: {currentWeather.humidity}</p>
                 </Col>
             </Row>
         </Container>

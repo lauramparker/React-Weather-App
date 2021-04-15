@@ -1,4 +1,3 @@
-import React from 'react';
 import axios from 'axios';
 
 
@@ -10,6 +9,11 @@ const API = {
 
     getFiveDay: function(searchCity) {
         return axios.get("https://api.openweathermap.org/data/2.5/forecast/daily?q=" + searchCity + "&cnt=5&appid=65af81772398c8021de436a5afa38da3")
+    },
+
+    //Did not use; made inline img src ref instead
+    getIcon: function(iconCode) {
+        return axios.get("https://openweathermap.org/img/wn/" + iconCode +"@2x.png")
     }
 }
 
