@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col, Container} from 'react-bootstrap';
-import '../components/NavBar';
-import './CurrentWeather';
-import '../components/CardContainer';
-import '../components/List';
+import NavBar from '../components/NavBar';
+import CurrentWeather from './CurrentWeather';
+import CardContainer from '../components/CardContainer';
+import List from '../components/List';
 
 
 const Dashboard = () => {
@@ -15,6 +15,8 @@ const Dashboard = () => {
                     <NavBar />
                 </Col>
             </Row> */}
+
+            
 
             <Row>
                 <Col>

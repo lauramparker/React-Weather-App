@@ -22,9 +22,10 @@ const CurrentWeather = () => {
                 lat: res.data.coord.lat,
                 long: res.data.coord.lon
               });
-            }).catch(err => console.error(err));
-            return () => { isMounted = false }; // use effect cleanup to set flag false, if unmounted
-          });
+            })
+            .catch(err => console.error(err));
+            // return () => { isMounted = false }; // use effect cleanup to set flag false, if unmounted
+          }, [searchCity, setCurrentWeather]);
 
     return(
         <Container>

@@ -21,7 +21,7 @@ const Search = ({children}) => {
     //then useEffect (anonymous function) with [dependencies] required as callback to update 
     useEffect(() => {
         if (name) {
-            console.log('Searching for this city: ' + searchCity + searchList)
+            console.log('Searching for this city: ' + searchCity)
         } else {console.log('Nooooope!')}
     }, [name, setSearchCity, searchList]);
 
