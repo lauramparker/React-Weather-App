@@ -8,7 +8,8 @@ const List = () => {
     return(
         <Container>
             <Row>
-                <Col>
+                <Col> 
+                <h6>Searched Cities</h6>
                 {searchList.map((item) =>
                     <li>{item}</li>
                 )}

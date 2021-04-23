@@ -16,6 +16,7 @@ const WeatherProvider = ({ children }) => {
         lon:''
     });
     const [fiveDayWeather, setFiveDayWeather] = useState({
+        data:[],
         dayOne:[],
         dayTwo:[],
         dayThree:[],

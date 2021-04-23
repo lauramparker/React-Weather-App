@@ -32,7 +32,7 @@ const Search = ({children}) => {
                 <Col>
                 <form onSubmit={handleSubmit}>
                 <label>
-                City:{searchCity}
+                <h6>City:</h6>
                 <input 
                   type="text" 
                   name="cityName"
