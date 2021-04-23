@@ -18,9 +18,22 @@ code {
 
 .wrapper {
   display:grid;
-  grid-template-rows: repeat(1, 100px);
+  grid-template-rows: repeat(1, 200px);
   grid-template-columns: repeat(7, 100px);
   grid-column-gap: 2px;
   grid-row-gap: 2px;
   background-color: rgba(0,0,0,0);
+}
+
+
+.daily {
+  align-items: left;
+  padding: 10px;
+  font-size: 13px;
+  color: white;
+  background-color: dodgerblue;
+  line-height: 1;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 5px;
 }

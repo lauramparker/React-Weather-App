@@ -16,10 +16,21 @@ const CardContainer = ({children}) => {
                     return(
                         <div className="daily" key={fiveDayWeather.data.dt}>
                             <Moment unix format="dddd MM/DD">{((daily.dt))}</Moment>
-                            {daily.weather.icon}
-                            High: {daily.temp.max}
-                            Low: {daily.temp.max}
-                            Humidity: {daily.humidity}%
+                            <Row>
+                                <Col>
+                                <img 
+                                src={'https://openweathermap.org/img/wn/'+daily.weather[0].icon+'@2x.png'}
+                                alt="weather icon"
+                                />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                High: {daily.temp.max}
+                                Low: {daily.temp.max}
+                                Humidity: {daily.humidity}%
+                                </Col>
+                            </Row>
                         </div>
                     )
                 })}
