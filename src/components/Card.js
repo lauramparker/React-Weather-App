@@ -1,12 +1,17 @@
-import React, { useState, useContext } from 'react';
-import { WeatherContext } from '../providers/WeatherProvider';
+import React from 'react';
+import { Col, Row, Container } from 'react-bootstrap';
+
 
 const Card = () => {
-    const { fiveDayWeather } = useContext(WeatherContext);
 
     return(
-
-
+        <Container>
+            <Row>
+                <Col>
+    
+                </Col>
+            </Row>
+        </Container>
     )
 
 }
