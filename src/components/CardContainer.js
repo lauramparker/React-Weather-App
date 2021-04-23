@@ -7,14 +7,14 @@ import Moment from 'react-moment';
 
 const CardContainer = ({children}) => {
 
-    const { fiveDayWeather } = useContext(WeatherContext);
+    const { sevenDayWeather } = useContext(WeatherContext);
 
     return(
         <Container id="sevenDayBox"> {children}
             <div className="wrapper">
-                {fiveDayWeather.data && fiveDayWeather.data.map(daily => {
+                {sevenDayWeather.data && sevenDayWeather.data.slice(1).map(daily => { //slice(1) starts the map from the second array element
                     return(
-                        <div className="daily" key={fiveDayWeather.data.dt}>
+                        <div className="daily" key={sevenDayWeather.data.dt}>
                             <Moment unix format="dddd MM/DD">{((daily.dt))}</Moment>
                             <Row>
                                 <Col>

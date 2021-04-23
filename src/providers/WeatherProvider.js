@@ -15,15 +15,8 @@ const WeatherProvider = ({ children }) => {
         lat:'',
         lon:''
     });
-    const [fiveDayWeather, setFiveDayWeather] = useState({
+    const [sevenDayWeather, setSevenDayWeather] = useState({
         data:[],
-        dayOne:[],
-        dayTwo:[],
-        dayThree:[],
-        dayFour:[],
-        dayFive:[],
-        daySix:[],
-        daySeven:[]
     });
 
 
@@ -36,8 +29,8 @@ const WeatherProvider = ({ children }) => {
                 setSearchList,
                 currentWeather,
                 setCurrentWeather,
-                fiveDayWeather,
-                setFiveDayWeather
+                sevenDayWeather,
+                setSevenDayWeather
             }}
             >{children}
             </WeatherContext.Provider>

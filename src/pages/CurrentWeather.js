@@ -14,13 +14,13 @@ const CurrentWeather = () => {
             API.getCurrentWeather(searchCity).then(res => {
               if (isMounted) setCurrentWeather({
                 name: res.data.name,
-                // date: moment.unix((res.dt).format("MM/DD/YYYY")),
+                date: res.data.dt,
                 temp: res.data.main.temp,
                 humidity: res.data.main.humidity,
                 wind: res.data.wind.speed,
                 iconCode: res.data.weather[0].icon,
                 lat: res.data.coord.lat,
-                long: res.data.coord.lon
+                lon: res.data.coord.lon
               });
             })
             .catch(err => console.error(err));
@@ -37,14 +37,14 @@ const CurrentWeather = () => {
             </Row>
             <Row>
                 <Col>
-                <p>NAME of CITY</p>
-                 <h4>name: {currentWeather.name}</h4>
+                 <h4>{currentWeather.name}</h4>
+                 <h6>Date</h6>
                  <img 
                    src={'https://openweathermap.org/img/wn/'+currentWeather.iconCode+'@2x.png'}
                    alt="weather icon"
                    />
                  <p>temperature: {currentWeather.temp} °F</p>
-                 <p>humidity: {currentWeather.humidity}</p>
+                 <p>humidity: {currentWeather.humidity} %</p>
                 </Col>
             </Row>
         </Container>

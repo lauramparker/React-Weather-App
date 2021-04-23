@@ -10,7 +10,7 @@ import API from '../utils/API';
 
 const Dashboard = () => {
 
-    const { setFiveDayWeather, currentWeather } = useContext(WeatherContext);
+    const { setSevenDayWeather, currentWeather } = useContext(WeatherContext);
 
 
     useEffect(() => {
@@ -18,18 +18,13 @@ const Dashboard = () => {
             let lat = currentWeather.lat;
             let lon = currentWeather.lon;
             API.getSevenDay(lat,lon).then(res => {
-              if (isMounted) setFiveDayWeather({
-                dayOne: res.data.daily[0],
-                dayTwo: res.data.daily[1],
-                dayThree: res.data.daily[2],
-                dayFour: res.data.daily[3],
-                dayFive: res.data.daily[4],
-                daySix: res.data.daily[5],
-                daySeven: res.data.daily[6],
+                console.log(res)
+              if (isMounted) setSevenDayWeather({
+                data: res.data.daily,
               });
             })
             .catch(err => console.error(err));
-          }, [currentWeather, setFiveDayWeather]);
+          }, [currentWeather, setSevenDayWeather]);
 
 
     return (
