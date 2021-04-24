@@ -15,10 +15,10 @@ const CardContainer = ({children}) => {
                 {sevenDayWeather.data && sevenDayWeather.data.slice(1).map(daily => { //slice(1) starts the map from the second array element
                     return(
                         <div className="daily" key={sevenDayWeather.data.dt}>
-                            <Moment unix format="dddd MM/DD">{((daily.dt))}</Moment>
+                            <Moment unix format="dddd, MMMM Do">{((daily.dt))}</Moment>
                             <Row>
                                 <Col>
-                                <img 
+                                <img
                                 src={'https://openweathermap.org/img/wn/'+daily.weather[0].icon+'@2x.png'}
                                 alt="weather icon"
                                 />
@@ -26,9 +26,9 @@ const CardContainer = ({children}) => {
                             </Row>
                             <Row>
                                 <Col>
-                                High: {daily.temp.max}
-                                Low: {daily.temp.max}
-                                Humidity: {daily.humidity}%
+                                High: {Math.round(daily.temp.max)}<br></br>
+                                Low: {Math.round(daily.temp.max)}<br></br>
+                                Humidity: {daily.humidity}%<br></br>
                                 </Col>
                             </Row>
                         </div>

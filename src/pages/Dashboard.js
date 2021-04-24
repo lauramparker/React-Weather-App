@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Row, Col, Container} from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
 import NavBar from '../components/NavBar';
+import Search from '../components/Search';
 import CurrentWeather from './CurrentWeather';
 import CardContainer from '../components/CardContainer';
 import List from '../components/List';
@@ -39,10 +40,14 @@ const Dashboard = () => {
 
             <Row>
                 <Col>
+                    <Search />
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <CurrentWeather />
                 </Col>
             </Row>
-            
             <Row>
                 <Col>
                     <CardContainer />

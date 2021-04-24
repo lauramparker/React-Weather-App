@@ -27,12 +27,12 @@ const Search = ({children}) => {
 
 
     return(
-        <Container>
+        <Container id='searchBox'>
             <Row>
                 <Col>
                 <form onSubmit={handleSubmit}>
                 <label>
-                <h6>City:</h6>
+                <h4>City:</h4>
                 <input 
                   type="text" 
                   name="cityName"
@@ -41,7 +41,7 @@ const Search = ({children}) => {
                   onChange={(event) => setName(event.target.value)}
                   />{children}
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Search" />
                 </form>
 
                 </Col>

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: navy;
 }
 
 code {
@@ -12,16 +13,42 @@ code {
     monospace;
 }
 
+.button {
+  font-size: 8;
+}
+
 #sevenDayBox {
   
+}
+
+#searchBox {
+  width: 6rem;
+  float: right;
+  margin-right: 8rem;
+
+}
+
+.todayBox {
+  align-items: left;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: navy;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 5px;
+
+
 }
 
 .wrapper {
   display:grid;
   grid-template-rows: repeat(1, 200px);
-  grid-template-columns: repeat(7, 100px);
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
   background-color: rgba(0,0,0,0);
 }
 
@@ -32,7 +59,7 @@ code {
   font-size: 13px;
   color: white;
   background-color: dodgerblue;
-  line-height: 1;
+  line-height: 1.5;
   cursor: pointer;
   transition: all .3s ease;
   border-radius: 5px;

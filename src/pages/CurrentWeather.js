@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import { WeatherContext } from '../providers/WeatherProvider';
 import {Row, Col, Container} from 'react-bootstrap';
+import Moment from 'react-moment';
 import API from '../utils/API';
-import Search from '../components/Search';
 
 const CurrentWeather = () => {
 
@@ -30,22 +30,19 @@ const CurrentWeather = () => {
 
     return(
         <Container>
-               <Row>
-                <Col>
-                    <Search />
-                </Col>
-            </Row>
             <Row>
-                <Col>
+              
+                <Col className='todayBox'>
                  <h4>{currentWeather.name}</h4>
-                 <h6>Date</h6>
+                 <Moment unix format="dddd, MMMM Do">{((currentWeather.date))}</Moment><br></br>
                  <img 
                    src={'https://openweathermap.org/img/wn/'+currentWeather.iconCode+'@2x.png'}
                    alt="weather icon"
                    />
-                 <p>temperature: {currentWeather.temp} °F</p>
+                 <p>temperature: {Math.round(currentWeather.temp)} °F</p>
                  <p>humidity: {currentWeather.humidity} %</p>
                 </Col>
+
             </Row>
         </Container>
 
