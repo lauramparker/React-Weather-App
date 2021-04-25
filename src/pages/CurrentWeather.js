@@ -9,6 +9,7 @@ const CurrentWeather = () => {
     const { currentWeather, setCurrentWeather, searchCity } = useContext(WeatherContext);
 
 
+
     useEffect(() => {
             let isMounted = true; // tip from Stack Overflow: 53949393/cant-perform-a-react-state-update-on-an-unmounted-component
             API.getCurrentWeather(searchCity).then(res => {

@@ -1,14 +1,18 @@
 import axios from 'axios';
 
+// Flickr images
+
+// Key:
+// 605f6a0b46fc12a889612c1f9e62a353
+
+// Secret:
+// 2e13325f2f829a53
+
 
 const API = {
 
     getCurrentWeather: function(searchCity) {
         return axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&units=imperial&appid=1b758f2281f1833aa291dff536f4b566")
-    },
-
-    getFiveDay: function(searchCity) {
-        return axios.get("https://api.openweathermap.org/data/2.5/forecast/daily?q=" + searchCity + "&units=imperial&cnt=5&appid=65af81772398c8021de436a5afa38da3")
     },
 
     getSevenDay: function(lat, lon) {
@@ -18,6 +22,17 @@ const API = {
     //Did not use; made inline img src ref instead
     getIcon: function(iconCode) {
         return axios.get("https://openweathermap.org/img/wn/" + iconCode +"@2x.png")
+    },
+
+    //Google Places API 
+    //(& resolving Google non-CORS with proxyURL, see ref: https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141)
+    getPhoto: function(searchCity, api_key) {
+        return axios.get('https://cors-anywhere.herokuapp.com/' + 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input='+searchCity+'&key='+api_key+'&inputtype=textquery&fields=name,photos')
+    },
+
+    //Google Places API to return photo
+    convertPhotoData: function(photoRef, api_key) {
+        return fetch('https://maps.googleapis.com/maps/api/place/photo?photoreference='+photoRef+'&key='+api_key+'&maxwidth=400&maxheight=400')
     }
 }
 
