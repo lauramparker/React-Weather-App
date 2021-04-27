@@ -1,38 +1,39 @@
 import React, { useContext } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
 import Moment from 'react-moment';
+//Scrollbar npm help: https://www.npmjs.com/package/react-horizontal-scrolling-menu
+import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 
-const Table = ({children}) => {
+const Table = ({ children }) => {
 
     const { sevenDayWeather } = useContext(WeatherContext);
 
-    return(
+    return (
         <Container id="hourlyBox"> {children}
-            <div className="table-hourly">
-                {sevenDayWeather.hourly && sevenDayWeather.hourly.slice(1).map(hourly => { //slice(1) starts the map from the second array element
-                    return(
-                        <div className="daily" key={sevenDayWeather.hourly.dt}>
-                            <Moment unix format="hh:mm">{((hourly.dt))}</Moment>
-                            <Row>
-                                <Col>
+            <h6 className="title" style={{textAlign:'center'}}>Hourly Weather Conditions</h6>
+            <div className="wrapper-hourly">
+                <ScrollMenu
+                    arrowLeft={<div style={{ fontSize: "30px", color:'white'}}>{" < "}</div>}
+                    arrowRight={<div style={{ fontSize: "30px", color:'white' }}>{" > "}</div>}
+                    scrollBy={5}
+                    //data = assignment required for <ScrollMenu> component.
+                    //Entire .map codeblock required for ScrollMenu
+                    data={sevenDayWeather.hourly && sevenDayWeather.hourly.slice(0 - 24).map(hourly => {
+                        return (
+                            <div className="hourly" key={sevenDayWeather.hourly.dt}>
+                                <br></br>
+                                <Moment unix format="h a">{((hourly.dt))}</Moment><br></br>
                                 <img
-                                src={'https://openweathermap.org/img/wn/'+hourly.weather[0].icon+'@2x.png'}
-                                alt="weather icon"
+                                    src={'https://openweathermap.org/img/wn/' + hourly.weather[0].icon + '.png'}
+                                    alt="weather icon"
                                 />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                High: {Math.round(daily.temp.max)}<br></br>
-                                Low: {Math.round(daily.temp.max)}<br></br>
-                                Humidity: {daily.humidity}%<br></br>
-                                </Col>
-                            </Row>
-                        </div>
-                    )
-                })}
+                                <p>{Math.round(hourly.temp)} °F</p>
+                            </div>
+                        )
+                    })}
+                />
             </div>
         </Container>
     )

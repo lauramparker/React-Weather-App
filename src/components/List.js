@@ -5,14 +5,14 @@ import { WeatherContext } from '../providers/WeatherProvider';
 const List = () => {
     const { searchList } = useContext(WeatherContext);
 
-    return(
+    return (
         <Container>
             <Row>
-                <Col> 
-                <h6>Searched Cities</h6>
-                {searchList.map((item) =>
-                    <li>{item}</li>
-                )}
+                <Col>
+                    <h6>Searched Cities</h6>
+                    {searchList.map((item) =>
+                        <li>{item}</li>
+                    )}
                 </Col>
             </Row>
         </Container>

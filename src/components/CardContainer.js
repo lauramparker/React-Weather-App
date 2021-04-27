@@ -4,32 +4,33 @@ import { WeatherContext } from '../providers/WeatherProvider';
 import Moment from 'react-moment';
 
 
-const CardContainer = ({children}) => {
+const CardContainer = ({ children }) => {
 
     const { sevenDayWeather } = useContext(WeatherContext);
 
-    return(
+    return (
         <Container id="sevenDayBox"> {children}
             <div className="wrapper-sevenDay">
                 {sevenDayWeather.data && sevenDayWeather.data.slice(1).map(daily => { //slice(1) starts the map from the second array element
-                    return(
+                    return (
                         <div className="daily" key={sevenDayWeather.data.dt}>
-                            <Moment unix format="dddd, MMMM Do">{((daily.dt))}</Moment>
+                            <h6><Moment unix format="ddd, MMMM Do">{((daily.dt))}</Moment></h6>
                             <Row>
                                 <Col>
-                                <img
-                                src={'https://openweathermap.org/img/wn/'+daily.weather[0].icon+'@2x.png'}
-                                alt="weather icon"
-                                />
+                                    <img
+                                        src={'https://openweathermap.org/img/wn/' + daily.weather[0].icon + '@2x.png'}
+                                        alt="weather icon"
+                                    />
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                High: {Math.round(daily.temp.max)}<br></br>
-                                Low: {Math.round(daily.temp.max)}<br></br>
-                                Humidity: {daily.humidity}%<br></br>
+                                    high: {Math.round(daily.temp.max)} °F<br></br>
+                                low: {Math.round(daily.temp.max)} °F<br></br>
+                                humidity: {daily.humidity} %<br></br>
                                 </Col>
                             </Row>
+
                         </div>
                     )
                 })}

@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
 
-const Search = ({children}) => { 
+const Search = ({ children }) => {
     //from WeatherContext
     const { searchCity, setSearchCity, setSearchList } = useContext(WeatherContext);
 
@@ -22,27 +22,26 @@ const Search = ({children}) => {
     useEffect(() => {
         if (name) {
             console.log('Searching for this city: ' + searchCity)
-        } else {console.log('Nooooope!')}
+        } else { console.log('Nooooope!') }
     }, [name, searchCity]);
 
 
-    return(
-        <Container id='searchBox'>
+    return (
+        <Container>
             <Row>
                 <Col>
-                <form onSubmit={handleSubmit}>
-                <label>
-                <h4>City:</h4>
-                <input 
-                  type="text" 
-                  name="cityName"
-                  value={name} 
-                  placeholder="search for a city..." 
-                  onChange={(event) => setName(event.target.value)}
-                  />{children}
-                </label>
-                <input type="submit" value="Search" />
-                </form>
+                    <form id='searchBox' onSubmit={handleSubmit}>
+                        <label>
+                            <input
+                                type="text"
+                                name="cityName"
+                                value={name}
+                                placeholder="search for a city..."
+                                onChange={(event) => setName(event.target.value)}
+                            />{children}
+                        </label>
+                        <input type="submit" value="Search" />
+                    </form>
 
                 </Col>
             </Row>
