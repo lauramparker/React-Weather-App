@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react';
 import { WeatherContext } from '../providers/WeatherProvider';
-import { Row, Col, Container, Image } from 'react-bootstrap';
+import { Row, Col, Container  } from 'react-bootstrap';
 import Moment from 'react-moment';
 import API from '../utils/API';
 
 const CurrentWeather = () => {
 
-  const { currentWeather, setCurrentWeather, searchCity, sevenDayWeather } = useContext(WeatherContext);
+  const { currentWeather, setCurrentWeather, searchCity } = useContext(WeatherContext);
 
   useEffect(() => {
     let isMounted = true; // tip from Stack Overflow: 53949393/cant-perform-a-react-state-update-on-an-unmounted-component
@@ -33,7 +33,7 @@ const CurrentWeather = () => {
         <Col className='todayBox'>
           <div className='backgroundImage'
             style={{
-              backgroundImage: `url("https://image.shutterstock.com/image-photo/cornfield-before-bad-weather-summer-260nw-764467735.jpg")`,
+              backgroundImage: `url("http://cityscapes.accuweather.com/cityscapes/France/Paris_93467552_LHD_L.jpg")`,
             }}>
             <div className='todayBoxText'>
               <h4>{currentWeather.name}</h4>
