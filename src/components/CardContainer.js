@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
-import Moment from 'react-moment';
+import Moment from 'react-moment';  
 
 
 const CardContainer = () => {

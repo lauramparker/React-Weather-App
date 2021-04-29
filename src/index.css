@@ -13,34 +13,20 @@ h6,h5,h4,h3,h2,h1, li {
   text-align: center;
 }
 
-.backgroundImage {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center, center;
-  border-radius: 5px;
-}
 
 
-#searchBox {
-  width: 30rem;
-  padding-top: 20px;
-  margin-left: 850px;
-  
-}
 
 
 /* Current Weather Components: container, text box */
 .todayBox {
   align-content: center;
   padding: 10px;
-  margin: 10px;
   cursor: pointer;
 
 }
 
 .todayBoxText {
-  width: 600px; 
+  width: 75%; 
   border-radius: 5px;
   background-color: dodgerblue;
   opacity: 0.8;
@@ -62,6 +48,8 @@ h6,h5,h4,h3,h2,h1, li {
   grid-template-columns: repeat(7, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+  margin-left: -5px;
+  margin-top: -10px;
 }
 
 .daily {
@@ -96,7 +84,6 @@ h6,h5,h4,h3,h2,h1, li {
 
 }
 
-
 .hourly {
   height: 150px;
   width: 100px;
@@ -109,7 +96,13 @@ h6,h5,h4,h3,h2,h1, li {
   cursor: pointer;
 }
 
-/* //SearchList & button*/
+/* //Search box & List of buttons*/
+#searchBox {
+  width: 30rem;
+  padding-top: 20px;
+  margin-left: 850px;
+  
+}
 .searchListBtn {
   width: 240px;
   align-self: center; 

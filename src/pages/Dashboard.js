@@ -30,7 +30,7 @@ const Dashboard = () => {
 
 
     return (
-        <Container>
+        <Container className='main'>
             <Row>
                 <Col xs={12}>
                     <Search />
