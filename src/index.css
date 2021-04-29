@@ -5,6 +5,12 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+  }
+}
+
 h6,h5,h4,h3,h2,h1, li {
   color: white;
 }
@@ -12,8 +18,6 @@ h6,h5,h4,h3,h2,h1, li {
 .title {
   text-align: center;
 }
-
-
 
 
 
@@ -50,6 +54,7 @@ h6,h5,h4,h3,h2,h1, li {
   grid-row-gap: 5px;
   margin-left: -5px;
   margin-top: -10px;
+  /* overflow-x:scroll; */
 }
 
 .daily {
