@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
 
 const Search = ({ children }) => {
@@ -27,29 +26,24 @@ const Search = ({ children }) => {
 
 
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <form id='searchBox' onSubmit={handleSubmit}>
-                        <label>
-                            <input
-                                type="text"
-                                name="cityName"
-                                value={name}
-                                placeholder="search for a city..."
-                                onChange={(event) => setName(event.target.value)}
-                                style={{borderRadius: '5px'}}
-                            />{children}
-                        </label>
-                        <input 
-                            type="submit" 
-                            value="Search" 
-                            style={{color: 'white', fontSize: '14px', borderColor: 'white', borderRadius: '5px', backgroundColor: 'dodgerblue'}} />
-                    </form>
-
-                </Col>
-            </Row>
-        </Container>
+        <div>
+            <form id='searchBox' onSubmit={handleSubmit}>
+                <label>
+                    <input
+                        type="text"
+                        name="cityName"
+                        value={name}
+                        placeholder="search for a city..."
+                        onChange={(event) => setName(event.target.value)}
+                        style={{ borderRadius: '5px' }}
+                    />{children}
+                </label>
+                <input
+                    type="submit"
+                    value="Search"
+                    style={{ color: 'white', fontSize: '14px', borderColor: 'white', borderRadius: '5px', backgroundColor: 'dodgerblue' }} />
+            </form>
+        </div>
     )
 }
 

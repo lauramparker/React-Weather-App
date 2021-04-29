@@ -31,8 +31,14 @@ const Dashboard = () => {
 
     return (
         <Container>
+            <Row>
+                <Col xs={12}>
+                    <Search />
+                </Col>
+            </Row>
+
             <Row xs={12}>
-                    <Table />
+                <Table />
             </Row>
 
             <Row>
@@ -40,7 +46,6 @@ const Dashboard = () => {
                     <CurrentWeather />
                 </Col>
                 <Col xs={3}>
-                    <Search />
                     <List />
                 </Col>
             </Row>

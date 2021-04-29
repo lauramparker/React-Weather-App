@@ -25,7 +25,8 @@ h6,h5,h4,h3,h2,h1, li {
 #searchBox {
   width: 30rem;
   padding-top: 20px;
-  margin-left: -20px;
+  margin-left: 850px;
+  
 }
 
 
@@ -88,7 +89,7 @@ h6,h5,h4,h3,h2,h1, li {
 }
 
 .wrapper-hourly {
-  margin: 20px;
+  margin: 10px;
   background-color: dodgerblue;
   opacity: 0.8;
   border-radius: 5px;
@@ -108,7 +109,7 @@ h6,h5,h4,h3,h2,h1, li {
   cursor: pointer;
 }
 
-/* //SearchList button*/
+/* //SearchList & button*/
 .searchListBtn {
   width: 240px;
   align-self: center; 
@@ -116,7 +117,6 @@ h6,h5,h4,h3,h2,h1, li {
   margin: 5px;
   margin-left: -20px;
   font-size: 16px;
-  font-weight: bold;
   text-align: center;
   color: white;
   background-color: dodgerblue;

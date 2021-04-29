@@ -33,7 +33,7 @@ const CurrentWeather = () => {
         <Col className='todayBox'>
         
             <div className='todayBoxText'>
-              <h4>{currentWeather.name}</h4>
+              <h3>{currentWeather.name}</h3>
               <Moment unix format="dddd, MMMM Do">{((currentWeather.date))}</Moment><br></br>
               <img
                 src={'https://openweathermap.org/img/wn/' + currentWeather.iconCode + '@2x.png'}

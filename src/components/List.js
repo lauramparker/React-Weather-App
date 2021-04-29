@@ -5,13 +5,15 @@ import { WeatherContext } from '../providers/WeatherProvider';
 const List = () => {
     const { searchList, setSearchCity } = useContext(WeatherContext);
 
+    const myCitiesList = Array.from(new Set(searchList)); //combination of Set and Array.from methods to get unique values (in this case from an array)
+
 
     return (
         <Container>
             <Row>
                 <Col>
-                    <h6 style={{textAlign: 'center', marginTop: '20px'}}>My City List</h6>
-                    <div className='searchList'>{searchList.map((item) =>
+                    <h3 style={{textAlign: 'center', marginTop: '60px', opacity: '0.8'}}>My Places</h3>
+                    <div className='searchList'>{myCitiesList.map((item) =>
                         <div key={item}>
                             <button 
                             className='searchListBtn'
