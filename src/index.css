@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Ubuntu', sans-serif;
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/10ab2cbc-233f-4080-8b4b-ffacb28eefd4/d65ml6b-fb82ca54-087c-4609-bce2-a5c31c9f069f.png/v1/fill/w_1024,h_724,q_80,strp/cloudy_background__3_by_demonkitty15_d65ml6b-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03MjQiLCJwYXRoIjoiXC9mXC8xMGFiMmNiYy0yMzNmLTQwODAtOGI0Yi1mZmFjYjI4ZWVmZDRcL2Q2NW1sNmItZmI4MmNhNTQtMDg3Yy00NjA5LWJjZTItYTVjMzFjOWYwNjlmLnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.XERgM6DWkOx_D6GL4N0I4W8qsbfFwEMR1wwetq6aEeQ");
   background-size: cover;
 }
