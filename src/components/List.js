@@ -12,7 +12,7 @@ const List = () => {
                 <Col>
                     <h6 style={{textAlign: 'center', marginTop: '20px'}}>My City List</h6>
                     <div className='searchList'>{searchList.map((item) =>
-                        <div>
+                        <div key={item}>
                             <button 
                             className='searchListBtn'
                             onClick={(event)=> setSearchCity(event.target.value)}

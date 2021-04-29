@@ -22,7 +22,7 @@ const Table = ({ children }) => {
                     //Entire .map codeblock required for ScrollMenu
                     data={sevenDayWeather.hourly && sevenDayWeather.hourly.slice(0 - 24).map(hourly => {
                         return (
-                            <div className="hourly" key={sevenDayWeather.hourly.dt}>
+                            <div className="hourly" key={hourly.dt}>
                                 <br></br>
                                 <Moment unix format="h a">{((hourly.dt))}</Moment><br></br>
                                 <img

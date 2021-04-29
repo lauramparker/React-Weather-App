@@ -1,13 +1,5 @@
 import axios from 'axios';
 
-// Flickr images
-
-// Key:
-// 605f6a0b46fc12a889612c1f9e62a353
-
-// Secret:
-// 2e13325f2f829a53
-
 
 const API = {
 
@@ -27,14 +19,14 @@ const API = {
 
     //Google Places API 
     //(& resolving Google non-CORS with proxyURL, see ref: https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141)
-    getPhoto: function (searchCity, api_key) {
-        return axios.get('https://cors-anywhere.herokuapp.com/' + 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + searchCity + '&key=' + api_key + '&inputtype=textquery&fields=name,photos')
-    },
+    // getPhoto: function (searchCity, api_key) {
+    //     return axios.get('https://cors-anywhere.herokuapp.com/' + 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + searchCity + '&key=' + api_key + '&inputtype=textquery&fields=name,photos')
+    // },
 
-    //Google Places API to return photo
-    convertPhotoData: function (photoRef, api_key) {
-        return fetch('https://maps.googleapis.com/maps/api/place/photo?photoreference=' + photoRef + '&key=' + api_key + '&maxwidth=400&maxheight=400')
-    }
+    // //Google Places API to return photo
+    // convertPhotoData: function (photoRef, api_key) {
+    //     return fetch('https://maps.googleapis.com/maps/api/place/photo?photoreference=' + photoRef + '&key=' + api_key + '&maxwidth=400&maxheight=400')
+    // }
 }
 
 export default API;

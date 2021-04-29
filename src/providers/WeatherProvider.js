@@ -4,7 +4,7 @@ export const WeatherContext = createContext();
 
 const WeatherProvider = ({ children }) => {
 
-    const [searchCity, setSearchCity] = useState();
+    const [searchCity, setSearchCity] = useState('Columbus');
     const [searchList, setSearchList] = useState([]);
     const [currentWeather, setCurrentWeather] = useState({
         name:'',

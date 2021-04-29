@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/10ab2cbc-233f-4080-8b4b-ffacb28eefd4/d65ml6b-fb82ca54-087c-4609-bce2-a5c31c9f069f.png/v1/fill/w_1024,h_724,q_80,strp/cloudy_background__3_by_demonkitty15_d65ml6b-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03MjQiLCJwYXRoIjoiXC9mXC8xMGFiMmNiYy0yMzNmLTQwODAtOGI0Yi1mZmFjYjI4ZWVmZDRcL2Q2NW1sNmItZmI4MmNhNTQtMDg3Yy00NjA5LWJjZTItYTVjMzFjOWYwNjlmLnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.XERgM6DWkOx_D6GL4N0I4W8qsbfFwEMR1wwetq6aEeQ");
+  background-size: cover;
 }
 
 h6,h5,h4,h3,h2,h1, li {
@@ -21,16 +22,9 @@ h6,h5,h4,h3,h2,h1, li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, center;
-  border-radius: 0px;
-  border-width: 1px;
-  border-color: white;
-  border-style: solid;
+  border-radius: 5px;
 }
 
-.city-image {
-  width: 100px;
-  height: 100px;
-}
 
 #searchBox {
   width: 30rem;
@@ -49,6 +43,10 @@ h6,h5,h4,h3,h2,h1, li {
 }
 
 .todayBoxText {
+  width: 600px; 
+  border-radius: 5px;
+  background-color: dodgerblue;
+  opacity: 0.8;
   align-content: center;
   padding: 50px;
   font-size: 20px;
@@ -77,13 +75,12 @@ h6,h5,h4,h3,h2,h1, li {
   text-align: center;
   color: white;
   background-color: dodgerblue;
+  opacity: 0.8;
   line-height: 1.5;
   cursor: pointer;
   transition: all .3s ease;
-  border-radius: 0px;
-  border-width: 1px;
-  border-color: white;
-  border-style: solid;
+  border-radius: 5px;
+ 
 }
 
 
@@ -97,10 +94,9 @@ h6,h5,h4,h3,h2,h1, li {
 .wrapper-hourly {
   margin: 20px;
   background-color: dodgerblue;
-  border-radius: 0px;
-  border-width: 1px;
-  border-color: white;
-  border-style: solid;
+  opacity: 0.8;
+  border-radius: 5px;
+
 }
 
 
@@ -128,8 +124,8 @@ h6,h5,h4,h3,h2,h1, li {
   text-align: center;
   color: white;
   background-color: dodgerblue;
-  border-color: white;
-  border-width: 1px;
+  opacity: 0.8;
+  border-radius: 5px;
   line-height: 1.5;
   cursor: pointer;
   transition: all .3s ease;

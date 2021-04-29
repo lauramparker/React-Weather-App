@@ -22,7 +22,7 @@ const Search = ({ children }) => {
     useEffect(() => {
         if (name) {
             console.log('Searching for this city: ' + searchCity)
-        } else { console.log('Nooooope!') }
+        } else { console.log('Try entereing city name again.') }
     }, [name, searchCity]);
 
 
@@ -38,12 +38,13 @@ const Search = ({ children }) => {
                                 value={name}
                                 placeholder="search for a city..."
                                 onChange={(event) => setName(event.target.value)}
+                                style={{borderRadius: '5px'}}
                             />{children}
                         </label>
                         <input 
                             type="submit" 
                             value="Search" 
-                            style={{color: 'white', fontSize: '14px', borderColor: 'white', backgroundColor: 'dodgerblue'}} />
+                            style={{color: 'white', fontSize: '14px', borderColor: 'white', borderRadius: '5px', backgroundColor: 'dodgerblue'}} />
                     </form>
 
                 </Col>
