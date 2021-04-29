@@ -40,7 +40,10 @@ const Search = ({ children }) => {
                                 onChange={(event) => setName(event.target.value)}
                             />{children}
                         </label>
-                        <input type="submit" value="Search" />
+                        <input 
+                            type="submit" 
+                            value="Search" 
+                            style={{color: 'white', fontSize: '14px', borderColor: 'white', backgroundColor: 'dodgerblue'}} />
                     </form>
 
                 </Col>

@@ -12,7 +12,7 @@ const Table = ({ children }) => {
 
     return (
         <Container id="hourlyBox"> {children}
-            <h6 className="title" style={{textAlign:'center'}}>Hourly Weather Conditions</h6>
+            <h6 className="title" style={{textAlign:'center', marginTop:'20px'}}>Hourly Weather Conditions</h6>
             <div className="wrapper-hourly">
                 <ScrollMenu
                     arrowLeft={<div style={{ fontSize: "30px", color:'white'}}>{" < "}</div>}

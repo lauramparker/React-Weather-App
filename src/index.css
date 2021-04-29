@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: navy;
+  background-color: black;
 }
 
 h6,h5,h4,h3,h2,h1, li {
@@ -21,7 +21,7 @@ h6,h5,h4,h3,h2,h1, li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center, center;
-  border-radius: 20px;
+  border-radius: 0px;
   border-width: 1px;
   border-color: white;
   border-style: solid;
@@ -34,9 +34,8 @@ h6,h5,h4,h3,h2,h1, li {
 
 #searchBox {
   width: 30rem;
-  float: left;
-  padding-top: 50px;
-
+  padding-top: 20px;
+  margin-left: -20px;
 }
 
 
@@ -66,8 +65,8 @@ h6,h5,h4,h3,h2,h1, li {
   display:grid;
   grid-template-rows: repeat(1, 250px);
   grid-template-columns: repeat(7, 1fr);
-  grid-column-gap: 4px;
-  grid-row-gap: 4px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .daily {
@@ -81,7 +80,7 @@ h6,h5,h4,h3,h2,h1, li {
   line-height: 1.5;
   cursor: pointer;
   transition: all .3s ease;
-  border-radius: 20px;
+  border-radius: 0px;
   border-width: 1px;
   border-color: white;
   border-style: solid;
@@ -98,7 +97,7 @@ h6,h5,h4,h3,h2,h1, li {
 .wrapper-hourly {
   margin: 20px;
   background-color: dodgerblue;
-  border-radius: 20px;
+  border-radius: 0px;
   border-width: 1px;
   border-color: white;
   border-style: solid;
@@ -115,6 +114,25 @@ h6,h5,h4,h3,h2,h1, li {
   color: white;
   line-height: 1.5;
   cursor: pointer;
+}
+
+/* //SearchList button*/
+.searchListBtn {
+  width: 240px;
+  align-self: center; 
+  padding: 5px;
+  margin: 5px;
+  margin-left: -20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: dodgerblue;
+  border-color: white;
+  border-width: 1px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all .3s ease;
 }
 
 

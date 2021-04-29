@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { WeatherContext } from '../providers/WeatherProvider';
 import { Row, Col, Container  } from 'react-bootstrap';
+import List from '../components/List';
 import Moment from 'react-moment';
 import API from '../utils/API';
 
@@ -35,7 +36,7 @@ const CurrentWeather = () => {
             style={{
               backgroundImage: `url("http://cityscapes.accuweather.com/cityscapes/France/Paris_93467552_LHD_L.jpg")`,
             }}>
-            <div className='todayBoxText'>
+            <div className='todayBoxText' style={{width: '300px', margin: '20px', backgroundColor: 'dodgerblue', opacity: '0.8'}}>
               <h4>{currentWeather.name}</h4>
               <Moment unix format="dddd, MMMM Do">{((currentWeather.date))}</Moment><br></br>
               <img

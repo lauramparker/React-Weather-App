@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { WeatherContext } from '../providers/WeatherProvider';
-// import NavBar from '../components/NavBar';
 import Search from '../components/Search';
 import CurrentWeather from './CurrentWeather';
 import CardContainer from '../components/CardContainer';
@@ -60,23 +59,17 @@ const Dashboard = () => {
 
     return (
         <Container>
-            {/* <Row>
-                <Col>
-                    <NavBar />
-                </Col>
-            </Row> */}
+            <Row>
+                <Table />
+            </Row>
 
             <Row>
-                <Col>
-                    <Search />
-                </Col>
-            </Row>
-            <Row>
-                <Table></Table>
-            </Row>
-            <Row>
-                <Col>
+                <Col xs={9}>
                     <CurrentWeather />
+                </Col>
+                <Col xs={3}>
+                    <Search />
+                    <List />
                 </Col>
             </Row>
 
@@ -87,18 +80,12 @@ const Dashboard = () => {
             </Row>
 
             <Row>
-                <Col>
-                    <List />
-                </Col>
-
-                <Col>
                     {/* <div className='city-image'>
                         <img
                             src={'https://maps.googleapis.com/maps/api/place/photo?photoreference=' + photoRef + '&key=' + api_key + '&maxwidth=400&maxheight=400'}
                             alt="searched city photo"
                         />
                     </div> */}
-                </Col>
             </Row>
         </Container>
 
