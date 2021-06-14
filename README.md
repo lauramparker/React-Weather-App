@@ -25,6 +25,8 @@ To set-up the development environment, clone the repository found at https://git
 
 To run the application locally, enter npm start. The app will build and automatically open on localhost port 3000.
 
+Alternatively, the app can be accessed on heroku: [My-React-Weather-App](https://my-react-weather-app-lmp.herokuapp.com/)
+
 ## Usage
 Use this project as an example of a React JS App calling data from a third-party server.
 
