@@ -1,5 +1,8 @@
 # React Weather App
  _A ReactJS Application_
+ 
+ ![License](https://img.shields.io/badge/LICENSE-MIT-blue)
+
 
 > React-Weather-App is a redux-style React application featuring advanced React hooks, providers, > react-bootstrap and a third-party API call to OpenWeatherMap API.  The application allows a user to:
 
