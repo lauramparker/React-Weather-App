@@ -9,6 +9,8 @@
 - See the City's Current & Forecasted Weather
 - Retrieve previous searches and related data from the "My Places" list
 
+![weather app demo](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
+
 ## Technologies Used
 - [ReactJS](https://reactjs.org)
 - [OpenWeatherMap API](https://openweathermap.org)
